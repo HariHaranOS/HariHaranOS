@@ -1,0 +1,92 @@
+//1.write a js program to add an element into an array at last without using push operation
+
+// Initialize the array
+let myArray = [1, 2, 3, 4];
+
+// Element to be added
+let newElement = 5;
+
+// Add the new element to the end of the array
+myArray[myArray.length] = newElement;
+
+// Print the updated array
+console.log(myArray); 
+
+//2.write a js program to remove an element from an array at last without using pop operation
+
+// Initialize the array
+let myArray = [1, 2, 3, 4, 5];
+
+// Remove the last element from the array
+myArray.length = myArray.length - 1;
+
+// Print the updated array
+console.log(myArray);
+
+//3.write a js program to include any special characters between two elements
+
+// Initialize the array with some elements
+let myArray = ['A', 'B', 'C'];
+
+// Specify the special character to insert
+let specialChar = '@';
+
+// Specify the indices where you want to insert the special character
+let index1 = 1; // Index before which the special character should be inserted
+let index2 = index1 + 1; // Index after which the special character should be inserted
+
+// Insert the special character between elements
+myArray.splice(index1 + 1, 0, specialChar);
+
+// Print the updated array
+console.log(myArray);
+
+//4.Include all the employee details(EMPID, EMPNAME, EMPSALARY EMPDESIGNATION) Display any 3 objects
+
+// Array of employee objects
+let employees = [
+    {
+        EMPID: 1,
+        EMPNAME: 'Alice Johnson',
+        EMPSALARY: 60000,
+        EMPDESIGNATION: 'Software Engineer'
+    },
+    {
+        EMPID: 2,
+        EMPNAME: 'Bob Smith',
+        EMPSALARY: 75000,
+        EMPDESIGNATION: 'Project Manager'
+    },
+    {
+        EMPID: 3,
+        EMPNAME: 'Charlie Brown',
+        EMPSALARY: 50000,
+        EMPDESIGNATION: 'UI/UX Designer'
+    },
+    {
+        EMPID: 4,
+        EMPNAME: 'David Wilson',
+        EMPSALARY: 65000,
+        EMPDESIGNATION: 'DevOps Engineer'
+    },
+    {
+        EMPID: 5,
+        EMPNAME: 'Eva Adams',
+        EMPSALARY: 72000,
+        EMPDESIGNATION: 'Business Analyst'
+    }
+];
+
+// Function to display employee details
+function displayEmployeeDetails(employee) {
+    console.log(`EMPID: ${employee.EMPID}`);
+    console.log(`EMPNAME: ${employee.EMPNAME}`);
+    console.log(`EMPSALARY: ${employee.EMPSALARY}`);
+    console.log(`EMPDEPARTMENT: ${employee.EMPDEPARTMENT}`);
+    console.log('--------------------------');
+}
+
+// Display details of the first 3 employees
+for (let i = 0; i < 3; i++) {
+    displayEmployeeDetails(employees[i]);
+}
